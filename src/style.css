@@ -32,7 +32,7 @@
      justify-content: space-between;
      align-items: flex-start;
   }
-  textarea[name="user-input"] {
+  textarea[name="userInput"] {
      width: 100%;
      height: 300px;
      padding: 5px;
@@ -55,7 +55,7 @@
      color: #151515
    }
   ul li {
-     background-color: #EEEEEE;lor de fondo de la caja */
+     background-color: #EEEEEE; /*color de fondo de la caja */
      border: 1px solid #ccc; /* Borde de la caja */
      padding: 10px; /* Relleno dentro de la caja */
      margin: 5PX 10PX;entre cajas */
