@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+header{
+    background-color: dimgray;
+    font-family: 'Poetsen One', sans-serif;
+}
+ h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Poetsen One', sans-serif;
+ }
+ body{
+     background-color: black;
+     color: white;
+     font-family: 'Poetsen One', sans-serif;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     margin: 2%;
+     height: 100vh;
+    }
+textarea{
+       width: 1000px;
+       height: 250px;
+       padding: 5px;
+       margin-bottom: 20px;
+       margin-top: 20px;
+       border-radius: 4px;
+       margin-left: auto;
+       margin-right: auto;
+       font-size: 14px;
+    }
+    .list-container{
+    width: 100%;
+ }
+ ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0;
+    margin: 20px 0;
+    list-style-type: none;
+    flex-wrap: wrap;
+ }
+ .metric{
+
+ }
+ button{
+    background-color: gray;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+}
+button:hover{
+    background-color: white ;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre los botones */
+    margin-top: 20px;
+
+ reset-button{
+
+ }
+button:hover{
+    background-color: white ;
+}
+button-container{
+}
+footer{
+
+}

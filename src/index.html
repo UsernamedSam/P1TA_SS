@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador de texto</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poetsen+One:regular" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ANALIZADOR DE TEXTO</h1>
+        </header>
+         <div class="list-container">
+        <ul>
+            <li class="metric">Palabras: <span id="wordCount">0</span></li>
+            <li class="metric">Caracteres: <span id="charCount">0</span></li>
+            <li class="metric">Caracteres sin espacios: <span id="charCountNoSpaces">0</span></li>
+            <li class="metric">Números: <span id="numberCount">0</span></li>
+            <li class="metric">Suma total de números: <span id="numberSum">0</span></li>
+            <li class="metric">Promedio longitud: <span id="avgWordLength">0</span></li>
+        </ul>
+         </div>
+        <textarea id="userInput" name="user-input" placeholder="Escriba su texto aquí..." ></textarea>
+        <button id="resetButton">Limpiar métricas</button>
+    </div>
+    <footer>
+        <p>By Samira Subía</p>
+    </footer>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
