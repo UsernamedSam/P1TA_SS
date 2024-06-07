@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
-  
   header{
      background-color: #A91D3A;
      font-family: "Roboto Mono", monospace;
+     text-align: center;
   }
    h1{
      color: #EEEEEE;
      text-align: center;
-     font-size: 50px;
+     font-size: 40px;
      font-family: "Roboto Mono", monospace;
    }
    body{
@@ -23,7 +22,7 @@
      margin: 0;
       }
   .container {
-     max-width: 800px;
+     max-width: 900px;
      width: 100%;
      padding: 20px;
   }
@@ -34,10 +33,10 @@
   }
   textarea[name="userInput"] {
      width: 100%;
-     height: 300px;
+     height: 200px;
      padding: 5px;
-     margin-bottom: 30px;
-     margin-top: 30px;
+     margin-bottom: 20px;
+     margin-top: 20px;
      border-radius: 5px;
      font-size: 14px;
      box-sizing: border-box;
@@ -58,9 +57,8 @@
      background-color: #EEEEEE; /*color de fondo de la caja */
      border: 1px solid #ccc; /* Borde de la caja */
      padding: 10px; /* Relleno dentro de la caja */
-     margin: 5PX 10PX;entre cajas */
+     margin: 5PX 5PX;/*entre cajas */
      border-radius: 5px; /* Esquinas redondeadas */
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para la caja */
   }
    button{
      background-color: gray;
@@ -86,7 +84,9 @@
   button:hover{
      background-color: #EEEEEE;
   }
-  header, footer {
+  footer {
      text-align: center;
+     font-family: "Roboto Mono", monospace;
+     
   }
   
