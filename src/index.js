@@ -1,38 +1,44 @@
-import analyzer from './analyzer.js';
-
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`
-let textArea = document.getElementById('userInput');
-let wordCount = document.getElementById('wordCount')
-let charCount = document.getElementById('charCount');
-let charCountNoSpaces = document.getElementById('charCountNoSpaces');
-let numberCount = document.getElementById('numberCount');
-let numberSum = document.getElementById('numberSum')
-let avgWordLength = document.getElementById('avgWordLength')
-
-textArea.addEventListener('input', function(){  
-  console.log('entrar', textArea.value.length); 
+import analyzer from './analyzer.js';
+document.addEventListener('DOMContentLoaded', () => {
   
-  wordCount.innerText = analyzer.getWordCount(textArea.value);
+  const textArea = document.getElementById('textarea[name="user-input"]');
+  const wordCount = document.getElementById('wordCount')
+  const charCount = document.getElementById('charCount');
+  const charCountNoSpaces = document.getElementById('charCountNoSpaces');
+  const numberCount = document.getElementById('numberCount');
+  const numberSum = document.getElementById('numberSum')
+  const avgWordLength = document.getElementById('avgWordLength')
 
-  charCount.innerText = analyzer.getCharacterCount(textArea.value);
+  textArea.addEventListener('input', function(){  
+  
+    console.log('entrar', textArea.value.length); 
 
-  charCountNoSpaces.innerText = analyzer.getCharacterCountExcludingSpaces(textArea.value);
+    const text = textArea.value;
 
-  numberCount.innerText = analyzer.getNumberCount(textArea.value);
+    const wordCount = analyzer.getWordCount(text);  // `let` variable
+    wordCount.innerText = wordCount;
 
-  numberSum.innerText = analyzer.getNumberSum(textArea.value);
+    charCount.innerText = analyzer.getCharacterCount(textArea.value);
 
-  avgWordLength.innerText = analyzer.getAverageWordLength(textArea.value);
-});
+    charCountNoSpaces.innerText = analyzer.getCharacterCountExcludingSpaces(textArea.value);
 
-const resetButton = document.getElementById('resetButton');
-resetButton.addEventListener('click', () => {
-  console.log('limpiar', textArea.value.length);
-  textArea.value = '';
-  wordCount.innerText = '0';
-  charCount.innerText = '0';
-  charCountNoSpaces.innerText = '0';
-  numberCount.innerText = '0';
-  numberSum.innerText = '0';
-  avgWordLength.innerText = '0';
+    numberCount.innerText = analyzer.getNumberCount(textArea.value);
+
+    numberSum.innerText = analyzer.getNumberSum(textArea.value);
+
+    avgWordLength.innerText = analyzer.getAverageWordLength(textArea.value);
+  });
+
+  const resetButton = document.getElementById('resetButton');
+  resetButton.addEventListener('click', () => {
+    console.log('limpiar', textArea.value.length);
+    textArea.value = '';
+    wordCount.innerText = '0';
+    charCount.innerText = '0';
+    charCountNoSpaces.innerText = '0';
+    numberCount.innerText = '0';
+    numberSum.innerText = '0';
+    avgWordLength.innerText = '0';
+  });
 });
