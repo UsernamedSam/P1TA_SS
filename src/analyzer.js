@@ -21,13 +21,10 @@ const analyzer = {
   getNumberCount: (text) => { 
     let count = 0;
 
-    const words = text.split(/\s+/);
-    for (let i = 0; i < words.length; i++) {
-      const word = words[i];
-
-      if (/^\d+(\.\d+)?$/.test(word)) {
-        count++;
-      }
+    const numbers = text.match(/\d+(\.\d+)?/g);
+    
+    if (numbers) {
+      count = numbers.length;
     }
 
     return count;
@@ -39,7 +36,8 @@ const analyzer = {
 
     if (numbers) {
       for (let i = 0; i < numbers.length; i++) {
-        sum += parseFloat(numbers[i]);
+        const number = parseFloat(numbers[i]);
+        sum += number
       }
     }
 
