@@ -21,7 +21,7 @@ const analyzer = {
   getNumberCount: (text) => { 
     let count = 0;
 
-    const numbers = text.match(/\d+(\.\d+)?/g);
+    const numbers = text.match(/\b\d+(\.\d+)?\b/g);
     
     if (numbers) {
       count = numbers.length;
@@ -32,7 +32,7 @@ const analyzer = {
 
   getNumberSum: (text) => {
     let sum = 0;
-    const numbers = text.match(/-?\d+(\.\d+)?/g);
+    const numbers = text.match(/\b\d+(\.\d+)?\b/g);
 
     if (numbers) {
       for (let i = 0; i < numbers.length; i++) {
@@ -46,3 +46,4 @@ const analyzer = {
 };
 
 export default analyzer; 
+//(/-?\d+(\.\d+)?/g)
